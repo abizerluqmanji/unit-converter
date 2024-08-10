@@ -1,17 +1,25 @@
-function celsiusToFahrenheit(celsius) {
-    return ((celsius * 9 / 5) + 32).toFixed(1);
-}
-
 function fahrenheitToCelsius(fahrenheit) {
     return ((fahrenheit - 32) * 5 / 9).toFixed(1);
 }
 
-function kilometersToMiles(kilometers) {
-    return (kilometers * 0.621371).toFixed(2);
+function celsiusToFahrenheit(celsius) {
+    return ((celsius * 9 / 5) + 32).toFixed(1);
 }
 
 function milesToKilometers(miles) {
-    return (miles / 0.621371).toFixed(2);
+    return (miles * 1.6093).toFixed(2);
+}
+
+function kilometersToMiles(kilometers) {
+    return (kilometers / 1.6093).toFixed(2);
+}
+
+function gallonsToLiters(gallons) {
+    return (gallons * 3.7854).toFixed(2)
+}
+
+function litersToGallons(liters) {
+    return (liters / 3.7854).toFixed(2)
 }
 
 function handleConversion(event) {
@@ -27,17 +35,23 @@ function handleConversion(event) {
     const otherInput = getOtherInput(input);
 
     switch (input.id) {
+        case 'fahrenheit':
+            otherInput.value = fahrenheitToCelsius(value);
+            break;
         case 'celsius':
             otherInput.value = celsiusToFahrenheit(value);
             break;
-        case 'fahrenheit':
-            otherInput.value = fahrenheitToCelsius(value);
+        case 'miles':
+            otherInput.value = milesToKilometers(value);
             break;
         case 'kilometers':
             otherInput.value = kilometersToMiles(value);
             break;
-        case 'miles':
-            otherInput.value = milesToKilometers(value);
+        case 'gallons':
+            otherInput.value = gallonsToLiters(value);
+            break;
+        case 'liters':
+            otherInput.value = litersToGallons(value);
             break;
     }
 }
