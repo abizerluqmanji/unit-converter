@@ -1,17 +1,17 @@
 function celsiusToFahrenheit(celsius) {
-    return (celsius * 9 / 5) + 32;
+    return ((celsius * 9 / 5) + 32).toFixed(1);
 }
 
 function fahrenheitToCelsius(fahrenheit) {
-    return (fahrenheit - 32) * 5 / 9;
+    return ((fahrenheit - 32) * 5 / 9).toFixed(1);
 }
 
 function kilometersToMiles(kilometers) {
-    return kilometers * 0.621371;
+    return (kilometers * 0.621371).toFixed(2);
 }
 
 function milesToKilometers(miles) {
-    return miles / 0.621371;
+    return (miles / 0.621371).toFixed(2);
 }
 
 function handleConversion(event) {
