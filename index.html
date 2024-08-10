@@ -2,18 +2,22 @@
 <html>
 
 <head>
-    <title>Temperature Converter</title>
+    <title>Unit Converter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Temperature Converter</h1>
-        <label for="celsius">Celsius:</label>
-        <input type="number" id="celsius" placeholder="Enter temperature in Celsius">
-        <br>
-        <label for="fahrenheit">Fahrenheit:</label>
-        <input type="number" id="fahrenheit" placeholder="Enter temperature in Fahrenheit">
+    <div class="conversion-container">
+        <div class="conversion-row">
+            <input type="number" id="celsius" placeholder="Celsius">
+            <span>=</span>
+            <input type="number" id="fahrenheit" placeholder="Fahrenheit">
+        </div>
+        <div class="conversion-row">
+            <input type="number" id="kilometers" placeholder="Kilometers">
+            <span>=</span>
+            <input type="number" id="miles" placeholder="Miles">
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
