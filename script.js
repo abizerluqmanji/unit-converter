@@ -22,6 +22,14 @@ function litersToGallons(liters) {
     return (liters / 3.7854).toFixed(2)
 }
 
+function poundsToKilograms(pounds) {
+    return (pounds * 0.4535).toFixed(2)
+}
+
+function kilogramsToPounds(kilograms) {
+    return (kilograms / 0.4535).toFixed(2)
+}
+
 function handleConversion(event) {
     const input = event.target;
     const value = parseFloat(input.value);
@@ -52,6 +60,12 @@ function handleConversion(event) {
             break;
         case 'liters':
             otherInput.value = litersToGallons(value);
+            break;
+        case 'pounds':
+            otherInput.value = poundsToKilograms(value);
+            break;
+        case 'kilograms':
+            otherInput.value = kilogramsToPounds(value);
             break;
     }
 }
