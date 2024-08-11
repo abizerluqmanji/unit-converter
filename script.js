@@ -34,13 +34,12 @@ function handleConversion(event) {
     const input = event.target;
     const value = parseFloat(input.value);
 
+    const otherInput = input.parentElement.querySelector('input:not([id="' + input.id + '"])');
+
     if (isNaN(value)) {
-        // Handle invalid input (clear other input)
-        clearOtherInput(input);
+        otherInput.value = '';
         return;
     }
-
-    const otherInput = getOtherInput(input);
 
     switch (input.id) {
         case 'fahrenheit':
@@ -68,16 +67,6 @@ function handleConversion(event) {
             otherInput.value = kilogramsToPounds(value);
             break;
     }
-}
-
-function getOtherInput(input) {
-    const row = input.parentElement;
-    return row.querySelector('input:not([id="' + input.id + '"])');
-}
-
-function clearOtherInput(input) {
-    const otherInput = getOtherInput(input);
-    otherInput.value = '';
 }
 
 const conversionRows = document.querySelectorAll('.conversion-row');
