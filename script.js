@@ -30,6 +30,14 @@ function kilogramsToPounds(kilograms) {
     return (kilograms / 0.4535).toFixed(2);
 }
 
+function ouncesToGrams(ounces) {
+    return (ounces * 28.3495).toFixed(2);
+}
+
+function gramsToOunces(grams) {
+    return (grams / 28.3495).toFixed(2);
+}
+
 function USDToINR(usd) {
     return (usd * 84).toFixed(2);
 }
@@ -73,6 +81,12 @@ function handleConversion(event) {
             break;
         case 'kilograms':
             otherInput.value = kilogramsToPounds(value);
+            break;
+        case 'ounces':
+            otherInput.value = ouncesToGrams(value);
+            break;
+        case 'grams':
+            otherInput.value = gramsToOunces(value);
             break;
         case 'usd':
             otherInput.value = USDToINR(value);
