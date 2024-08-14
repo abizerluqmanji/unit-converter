@@ -15,19 +15,27 @@ function kilometersToMiles(kilometers) {
 }
 
 function gallonsToLiters(gallons) {
-    return (gallons * 3.7854).toFixed(2)
+    return (gallons * 3.7854).toFixed(2);
 }
 
 function litersToGallons(liters) {
-    return (liters / 3.7854).toFixed(2)
+    return (liters / 3.7854).toFixed(2);
 }
 
 function poundsToKilograms(pounds) {
-    return (pounds * 0.4535).toFixed(2)
+    return (pounds * 0.4535).toFixed(2);
 }
 
 function kilogramsToPounds(kilograms) {
-    return (kilograms / 0.4535).toFixed(2)
+    return (kilograms / 0.4535).toFixed(2);
+}
+
+function USDToINR(usd) {
+    return (usd * 84).toFixed(2);
+}
+
+function INRToUSD(inr) {
+    return (inr / 84).toFixed(2);
 }
 
 function handleConversion(event) {
@@ -65,6 +73,12 @@ function handleConversion(event) {
             break;
         case 'kilograms':
             otherInput.value = kilogramsToPounds(value);
+            break;
+        case 'usd':
+            otherInput.value = USDToINR(value);
+            break;
+        case 'inr':
+            otherInput.value = INRToUSD(value);
             break;
     }
 }
