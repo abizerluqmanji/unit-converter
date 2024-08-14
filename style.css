@@ -24,12 +24,19 @@ footer {
     gap: 1rem;
 }
 
+.conversion-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    align-items: center;
+}
+
 input[type="number"] {
     font-size: 1.2rem;
     padding: 0.5rem;
-    width: 5rem;
+    width: 6rem;
 }
 
 span {
-    margin: 0 0.25rem;
+    margin: 0 0.2rem;
+    text-align: left;
 }
