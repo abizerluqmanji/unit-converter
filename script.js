@@ -1,4 +1,5 @@
 const MILESTOKILOMETERS = 1.6093
+const INCHESTOCENTIMETERS = 2.54
 const GALLONSTOLITERS = 3.7854
 const POUNDSTOKILOGRAMS = 0.4535
 const OUNCESTOGRAMS = 28.3495
@@ -39,6 +40,12 @@ function handleConversion(event) {
             break;
         case 'kilometers':
             otherInput.value = convert(value, 1 / MILESTOKILOMETERS);
+            break;
+        case 'inches':
+            otherInput.value = convert(value, INCHESTOCENTIMETERS);
+            break;
+        case 'centimeters':
+            otherInput.value = convert(value, 1 / INCHESTOCENTIMETERS);
             break;
         case 'gallons':
             otherInput.value = convert(value, GALLONSTOLITERS);
