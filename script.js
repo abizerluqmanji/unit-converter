@@ -1,6 +1,7 @@
 const MILESTOKILOMETERS = 1.6093
 const INCHESTOCENTIMETERS = 2.54
 const GALLONSTOLITERS = 3.7854
+const FLUIDOUNCESTOMILLILITERS = 29.5735
 const POUNDSTOKILOGRAMS = 0.4535
 const OUNCESTOGRAMS = 28.3495
 const USDTOINR = 84 // Approximate value
@@ -52,6 +53,12 @@ function handleConversion(event) {
             break;
         case 'liters':
             otherInput.value = convert(value, 1 / GALLONSTOLITERS);
+            break;
+        case 'fluidOunces':
+            otherInput.value = convert(value, FLUIDOUNCESTOMILLILITERS);
+            break;
+        case 'milliliters':
+            otherInput.value = convert(value, 1 / FLUIDOUNCESTOMILLILITERS);
             break;
         case 'pounds':
             otherInput.value = convert(value, POUNDSTOKILOGRAMS);
