@@ -18,7 +18,6 @@ body {
     justify-content: center;
     font-size: 1.2rem;
     text-align: center;
-    height: 100vh;
 }
 
 footer {
@@ -29,11 +28,6 @@ footer {
 .page-container {
     display: grid;
     gap: 1rem;
-    padding: 2rem;
-    backdrop-filter: blur(2px);
-    background-color: #a3a3a36c;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
 }
 
 .conversion-row {
