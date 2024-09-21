@@ -32,7 +32,7 @@ footer {
 
 .conversion-row {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr 0.5fr 0.25fr 1fr 0.5fr;
     align-items: center;
 }
 
@@ -87,6 +87,6 @@ a:visited {
 }
 
 span {
-    margin: 0 0.2rem;
+    margin: 0 0.5rem;
     text-align: left;
 }
