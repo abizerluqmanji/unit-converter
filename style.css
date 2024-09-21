@@ -36,6 +36,11 @@ input[type="number"] {
     width: 6rem;
 }
 
+input[type="time"] {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
 span {
     margin: 0 0.2rem;
     text-align: left;
