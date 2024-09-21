@@ -1,5 +1,5 @@
 :root {
-    --shadow : 0 0 12px 3px rgba(0,0,0,0.1);
+    --shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -10,7 +10,7 @@ body {
 }
 
 body {
-    background: radial-gradient(rgb(58, 58, 58),rgb(34, 34, 34));
+    background: radial-gradient(rgb(58, 58, 58), rgb(34, 34, 34));
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ footer {
     backdrop-filter: blur(2px);
     background-color: #a3a3a36c;
     border-radius: 16px;
-    box-shadow:  var(--shadow);
+    box-shadow: var(--shadow);
 }
 
 .conversion-row {
@@ -67,7 +67,7 @@ input[type="time"] {
     outline: none;
     font-size: 1.2rem;
     padding: 0.5rem;
-    width: 8rem;
+    width: 6rem;
     transition: 0.2s;
 }
 
@@ -78,6 +78,10 @@ input[type="time"]:focus {
 
 input[type="time"]:focus::placeholder {
     color: transparent;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
 }
 
 a {
