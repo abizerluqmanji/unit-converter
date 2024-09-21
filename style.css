@@ -61,17 +61,31 @@ input[type="number"]:focus::placeholder {
     color: transparent;
 }
 
+input[type="time"] {
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 8rem;
+    transition: 0.2s;
+}
+
+input[type="time"]:focus {
+    scale: 1.05;
+    box-shadow: var(--shadow);
+}
+
+input[type="time"]:focus::placeholder {
+    color: transparent;
+}
+
 a {
     color: white;
 }
 
 a:visited {
     color: white;
-}
-
-input[type="time"] {
-    font-size: 1.2rem;
-    padding: 0.5rem;
 }
 
 span {
