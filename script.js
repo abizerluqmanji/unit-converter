@@ -5,7 +5,7 @@ const FLUIDOUNCESTOMILLILITERS = 29.5735;
 const MPGTOKMPL = 0.4251;
 const POUNDSTOKILOGRAMS = 0.4535;
 const OUNCESTOGRAMS = 28.3495;
-const USDTOINR = 86.5; // Approximate value
+const USDTOINR = 88; // Approximate value
 
 function fahrenheitToCelsius(fahrenheit) {
     return ((fahrenheit - 32) * 5 / 9).toFixed(1);
