@@ -1,6 +1,7 @@
 :root {
-    --shadow: 0 0 12px 3px rgba(0, 0, 0, 0.1);
-    font-family: 'Roboto', sans-serif;
+    --bg-color: #0d1117;
+    --text-color: #f0f6fc;
+    --muted-text-color: #9198a1;
 }
 
 html,
@@ -10,8 +11,9 @@ body {
 }
 
 body {
-    background: radial-gradient(rgb(58, 58, 58), rgb(34, 34, 34));
-    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +49,6 @@ input[type="number"] {
 
 input[type="number"]:focus {
     scale: 1.05;
-    box-shadow: var(--shadow);
 }
 
 input[type="number"]:focus::placeholder {
@@ -66,7 +67,6 @@ input[type="time"] {
 
 input[type="time"]:focus {
     scale: 1.05;
-    box-shadow: var(--shadow);
 }
 
 input[type="time"]:focus::placeholder {
@@ -78,11 +78,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 a {
-    color: lightgray;
-}
-
-a:visited {
-    color: lightgray;
+    color: var(--muted-text-color);
 }
 
 span {
