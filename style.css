@@ -11,7 +11,7 @@ body {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Source Sans Pro", "Source Sans Pro Fallback";
     background: var(--bg-color);
     color: var(--text-color);
     display: flex;
