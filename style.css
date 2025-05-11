@@ -28,39 +28,24 @@ body {
     align-items: center;
 }
 
+input[type="time"],
 input[type="number"] {
     border-radius: 4px;
     border: none;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 0.5rem;
     width: 6rem;
     transition: 0.2s;
 }
 
+input[type="time"]:focus,
 input[type="number"]:focus {
     scale: 1.05;
 }
 
+input[type="time"]:focus::placeholder,
 input[type="number"]:focus::placeholder {
-    color: transparent;
-}
-
-input[type="time"] {
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    width: 6rem;
-    transition: 0.2s;
-}
-
-input[type="time"]:focus {
-    scale: 1.05;
-}
-
-input[type="time"]:focus::placeholder {
     color: transparent;
 }
 
