@@ -4,12 +4,6 @@
     --muted-text-color: #9198a1;
 }
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-
 body {
     font-family: "Source Sans Pro", "Source Sans Pro Fallback";
     background: var(--bg-color);
@@ -20,10 +14,7 @@ body {
     font-size: 1.2rem;
     text-align: center;
     height: 100vh;
-}
-
-footer {
-    margin-top: auto;
+    margin: 0;
 }
 
 .page-container {
@@ -77,11 +68,22 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     display: none;
 }
 
-a {
-    color: var(--muted-text-color);
-}
-
 span {
     margin: 0 0.5rem;
     text-align: left;
+}
+
+.icon-link {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+.icon-link img {
+    width: 18px;
+    height: 18px;
+}
+
+footer {
+    margin-block-start: 0.5rem;
+    font-size: 1rem;
 }
