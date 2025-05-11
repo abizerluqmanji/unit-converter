@@ -5,7 +5,18 @@ const FLUIDOUNCESTOMILLILITERS = 29.5735;
 const MPGTOKMPL = 0.4251;
 const POUNDSTOKILOGRAMS = 0.4535;
 const OUNCESTOGRAMS = 28.3495;
-const USDTOINR = 85; // Approximate value
+let USDTOINR = 85; // Default fallback value
+
+async function fetchExchangeRate() {
+    try {
+        const response = await fetch('https://open.er-api.com/v6/latest/USD');
+        const data = await response.json();
+        USDTOINR = data.rates.INR;
+    } catch (error) {
+        console.error('Error fetching exchange rate:', error);
+    }
+    document.querySelector('#inr').placeholder = USDTOINR.toFixed(2);
+}
 
 function fahrenheitToCelsius(fahrenheit) {
     return ((fahrenheit - 32) * 5 / 9).toFixed(1);
@@ -124,6 +135,8 @@ function handleConversion(event) {
             break;
     }
 }
+
+fetchExchangeRate();
 
 const conversionRows = document.querySelectorAll('.conversion-row');
 
