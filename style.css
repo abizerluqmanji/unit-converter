@@ -13,13 +13,14 @@ body {
     align-items: center;
     font-size: 1.2rem;
     text-align: center;
-    height: 100vh;
+    height: 100%;
     margin: 0;
 }
 
 .page-container {
     display: grid;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .conversion-row {
@@ -69,6 +70,5 @@ span {
 }
 
 footer {
-    margin-block-start: 0.5rem;
     font-size: 1rem;
 }
