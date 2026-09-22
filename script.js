@@ -94,6 +94,12 @@ function handleConversion(event) {
     }
 }
 
+const footerYearElement = document.querySelector('#footer-year');
+
+if (footerYearElement) {
+    footerYearElement.textContent = new Date().getFullYear();
+}
+
 fetchExchangeRate();
 
 const conversionRows = document.querySelectorAll('.conversion-row');
